@@ -2,11 +2,14 @@
   "name": "easy-react-cli",
   "version": "1.0.1",
   "description": "",
-  "main": "cli.js",
+  "main": "bin/cli.js",
   "scripts": {
+    "publish-bug": "node modifyversion.js --r & npm publish",
+    "publish-feature": "node modifyversion.js --m & npm publish",
+    "publish-new": "node modifyversion.js --l & npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "bin": "cli.js",
+  "bin": "bin/cli.js",
   "author": "",
   "license": "ISC",
   "dependencies": {

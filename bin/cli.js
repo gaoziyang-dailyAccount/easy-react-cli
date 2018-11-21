@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 const program = require('commander');
 const inquirer = require('inquirer');
-const question = require('./lib/question');
 const path = require('path');
 const { existsSync } = require('fs');
 const ora = require('ora');
-const utils = require('./lib/utils');
+const utils = require('../lib/utils');
+const question = require('../lib/question');
 program.command('setup <name>').action(function (name) {
     const baseUrl = path.resolve(process.cwd(), name);
     if (!existsSync(baseUrl)) {
